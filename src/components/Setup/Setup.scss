@@ -32,12 +32,16 @@
 }
 
 .wrapper {
-    width: 74px;
+    width: 20%;
+    height: calc(10% + 23px);
+
+    margin-top: 10px;
 
     text-align: center;
     background-color: #000;
 
     p {
+        max-height: 23px;
         padding-bottom: 5px;
 
         background-color: #e2e2e2;
@@ -45,20 +49,24 @@
 }
 
 .checkbox {
-    width: 74px;
-    height: 40px;
-
     input {
         display: none;
     }
 
     div {
-        width: 34px;
-        height: 34px;
+        width: 37.5%;
+        height: calc(100% - 23px - 10px);
 
-        margin: 3px;
+        margin: 5px;
 
         background-color: #fff;
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .setup {
+        width: 100%;
+        height: 50%;
     }
 }

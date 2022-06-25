@@ -3,15 +3,29 @@
   margin: 0;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-
-  background-color: #eee;
-}
-
 button, input {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: #eee;
+}
+
+@media screen and (max-width: 850px) {
+  #root {
+      box-sizing: border-box;
+
+      padding: 10px;
+      align-items: flex-start;
+  }
 }

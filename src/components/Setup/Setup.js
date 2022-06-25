@@ -6,6 +6,12 @@ function Setup({ volume, setVolume, status, setStatus, currSet, setCurrSet }) {
 
     const switchEr = { marginLeft: 'auto' };
 
+    const handleKeyPress = e => {
+        if(e.keyCode === 32) {
+            setStatus(!status);
+        }
+    };
+
     return (
         <div className='setup'>
             <div className='wrapper'>
@@ -19,7 +25,7 @@ function Setup({ volume, setVolume, status, setStatus, currSet, setCurrSet }) {
             <input type='range' value={volume} min={0} max={1} step={0.01} onChange={(e => setVolume(e.target.value))} className='range' />
 
             <div className='wrapper'>
-                <p>Sample set</p>
+                <p>Set</p>
                 <label className='checkbox'>
                     <input type='checkbox' checked={currSet} onChange={e => setCurrSet(e.target.checked)} />
                     <div style={currSet ? {} : switchEr} />

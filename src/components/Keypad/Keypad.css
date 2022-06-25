@@ -1,3 +1,9 @@
+@media screen and (hover: hover) {
+  .keypad button:hover {
+    transform: scale(1.1);
+    box-shadow: none;
+  }
+}
 .keypad {
   box-sizing: border-box;
   width: 50%;
@@ -14,13 +20,16 @@
   box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5019607843);
   font-size: 1.1em;
 }
-.keypad button:hover {
-  transform: scale(1.1);
-  box-shadow: none;
-}
 .keypad button:active {
   transform: scale(0.9);
   box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5019607843);
+}
+
+@media screen and (max-width: 850px) {
+  .keypad {
+    width: 100%;
+    height: 50%;
+  }
 }
 
 /*# sourceMappingURL=Keypad.css.map */
