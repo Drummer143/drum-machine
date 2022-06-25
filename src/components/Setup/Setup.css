@@ -26,10 +26,19 @@
   outline: solid 2px #333;
 }
 
+.wrapper {
+  width: 74px;
+  text-align: center;
+  background-color: #000;
+}
+.wrapper p {
+  padding-bottom: 5px;
+  background-color: #e2e2e2;
+}
+
 .checkbox {
   width: 74px;
   height: 40px;
-  background-color: #000;
 }
 .checkbox input {
   display: none;
