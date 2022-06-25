@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import './Keypad.css';
 
-const Button = ({ keyParams, volume, status }) => {
-    const { keyTrigger, url, keyCode } = keyParams;
+const Button = ({ keyParams, volume, status, setScreenText }) => {
+    const { keyTrigger, url, keyCode, id } = keyParams;
 
     const playAudio = () => {
         if (status) {
@@ -10,6 +10,7 @@ const Button = ({ keyParams, volume, status }) => {
             audio.currentTime = 0;
             audio.volume = volume;
             audio.play();
+            setScreenText(id.split('-').join(' '));
         }
     }
 
@@ -32,9 +33,9 @@ const Button = ({ keyParams, volume, status }) => {
     );
 };
 
-function Keypad({ sampleSet, volume, status }) {
+function Keypad({ sampleSet, volume, status, setScreenText }) {
 
-    const buttons = sampleSet.map((key, i) => <Button key={i} keyParams={key} volume={volume} status={status} />);
+    const buttons = sampleSet.map((key, i) => <Button key={i} keyParams={key} volume={volume} status={status} setScreenText={setScreenText} />);
 
     return (
         <div className="keypad">

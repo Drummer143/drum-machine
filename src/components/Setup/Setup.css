@@ -50,6 +50,16 @@
   cursor: pointer;
 }
 
+.screen {
+  width: 70%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-size: 1.2em;
+}
+
 @media screen and (max-width: 850px) {
   .setup {
     width: 100%;
