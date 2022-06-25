@@ -11,16 +11,15 @@ const Button = ({ keyParams, volume, status, setScreenText }) => {
             audio.volume = volume;
             audio.play();
             setScreenText(id.split('-').join(' '));
-
         }
-    }
+    };
 
-    const handleKeyPress = (e) => {
+    const handleKeyPress = e => {
         if (e.keyCode === keyCode) {
             playAudio();
             const button = document.getElementById(keyCode);
             button.className = 'active';
-            setTimeout(() => button.className = '', 100);
+            setTimeout(() => (button.className = ''), 100);
         }
     };
 
@@ -30,7 +29,7 @@ const Button = ({ keyParams, volume, status, setScreenText }) => {
     });
 
     return (
-        <button type='button' onClick={playAudio} id={keyCode}>
+        <button type="button" onClick={playAudio} id={keyCode}>
             <audio id={keyTrigger} src={url} />
             {keyTrigger}
         </button>
@@ -38,14 +37,17 @@ const Button = ({ keyParams, volume, status, setScreenText }) => {
 };
 
 function Keypad({ sampleSet, volume, status, setScreenText }) {
+    const buttons = sampleSet.map((key, i) => (
+        <Button
+            key={i}
+            keyParams={key}
+            volume={volume}
+            status={status}
+            setScreenText={setScreenText}
+        />
+    ));
 
-    const buttons = sampleSet.map((key, i) => <Button key={i} keyParams={key} volume={volume} status={status} setScreenText={setScreenText} />);
-
-    return (
-        <div className="keypad">
-            {buttons}
-        </div>
-    );
+    return <div className="keypad">{buttons}</div>;
 }
 
 export default Keypad;

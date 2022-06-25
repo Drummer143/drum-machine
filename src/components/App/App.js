@@ -13,8 +13,22 @@ function App() {
 
     return (
         <div className="app">
-            <Keypad sampleSet={currSet ? setOne : setTwo} volume={volume} status={status} setScreenText={setScreenText} />
-            <Setup volume={volume} setVolume={setVolume} status={status} setStatus={setStatus} currSet={currSet} setCurrSet={setCurrSet} screenText={screenText} setScreenText={setScreenText} />
+            <Keypad
+                sampleSet={currSet ? setOne : setTwo}
+                volume={volume}
+                status={status}
+                setScreenText={setScreenText}
+            />
+            <Setup
+                volume={volume}
+                setVolume={setVolume}
+                status={status}
+                setStatus={setStatus}
+                currSet={currSet}
+                setCurrSet={setCurrSet}
+                screenText={screenText}
+                setScreenText={setScreenText}
+            />
         </div>
     );
 }

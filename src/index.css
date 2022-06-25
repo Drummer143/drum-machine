@@ -1,31 +1,32 @@
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
-button, input {
-  border: none;
-  outline: none;
-  cursor: pointer;
+button,
+input {
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 #root {
-  width: 100vw;
-  height: 100vh;
+    width: 100vw;
+    height: 100vh;
 
-  display: flex;
+    display: flex;
 
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
 
-  background-color: #eee;
+    background-color: #eee;
 }
 
 @media screen and (max-width: 850px) {
-  #root {
-      box-sizing: border-box;
+    #root {
+        box-sizing: border-box;
 
-      padding: 10px;
-      align-items: flex-start;
-  }
+        padding: 10px;
+        align-items: flex-start;
+    }
 }
