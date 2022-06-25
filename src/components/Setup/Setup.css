@@ -1,0 +1,45 @@
+.setup {
+  width: 50%;
+  height: 100%;
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.range {
+  width: 50%;
+  height: 10px;
+  -webkit-appearance: none;
+  border-radius: 10px;
+  background-color: #333;
+  border: solid 1px #fff;
+}
+
+.range::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  -webkit-appearance: none;
+  background-color: #999;
+  border-radius: 50%;
+  outline: solid 2px #333;
+}
+
+.checkbox {
+  width: 74px;
+  height: 40px;
+  background-color: #000;
+}
+.checkbox input {
+  display: none;
+}
+.checkbox div {
+  width: 34px;
+  height: 34px;
+  margin: 3px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=Setup.css.map */

@@ -6,11 +6,14 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-    const [volume, setVolume] = useState(0.5);
+    const [volume, setVolume] = useState(0.25);
+    const [status, setStatus] = useState(true);
+    const [currSet, setCurrSet] = useState(true);
+
     return (
         <div className="app">
-            <Keypad sampleSet={setOne} volume={volume} />
-            <Setup volume={volume} setVolume={setVolume}/>
+            <Keypad sampleSet={currSet ? setOne : setTwo} volume={volume} status={status} />
+            <Setup volume={volume} setVolume={setVolume} status={status} setStatus={setStatus} currSet={currSet} setCurrSet={setCurrSet} />
         </div>
     );
 }
