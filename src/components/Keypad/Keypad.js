@@ -4,12 +4,16 @@ import './Keypad.css';
 const Button = ({ keyParams, volume }) => {
     const { keyTrigger, url, keyCode } = keyParams;
 
+    const playAudio = () => {
+        const audio = document.getElementById(keyTrigger);
+        audio.currentTime = 0;
+        audio.volume = volume;
+        audio.play();
+    }
+
     const handleKeyPress = (e) => {
         if (e.keyCode === keyCode) {
-            const audio = document.getElementById(keyTrigger);
-            audio.currentTime = 0;
-            audio.volume = volume;
-            audio.play();
+            playAudio();
         }
     };
 
@@ -19,7 +23,7 @@ const Button = ({ keyParams, volume }) => {
     });
 
     return (
-        <button type='button' onClick={handleKeyPress}>
+        <button type='button' onClick={playAudio}>
             <audio id={keyTrigger} src={url} />
             {keyTrigger}
         </button>
