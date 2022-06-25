@@ -33,6 +33,11 @@
     }
 }
 
+.active {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 10px #00000080;
+}
+
 @media screen and (max-width: 850px) {
     .keypad {
         width: 100%;

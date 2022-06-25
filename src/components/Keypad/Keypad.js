@@ -11,12 +11,16 @@ const Button = ({ keyParams, volume, status, setScreenText }) => {
             audio.volume = volume;
             audio.play();
             setScreenText(id.split('-').join(' '));
+
         }
     }
 
     const handleKeyPress = (e) => {
         if (e.keyCode === keyCode) {
             playAudio();
+            const button = document.getElementById(keyCode);
+            button.className = 'active';
+            setTimeout(() => button.className = '', 100);
         }
     };
 
@@ -26,7 +30,7 @@ const Button = ({ keyParams, volume, status, setScreenText }) => {
     });
 
     return (
-        <button type='button' onClick={playAudio}>
+        <button type='button' onClick={playAudio} id={keyCode}>
             <audio id={keyTrigger} src={url} />
             {keyTrigger}
         </button>

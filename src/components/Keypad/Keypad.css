@@ -25,6 +25,11 @@
   box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5019607843);
 }
 
+.active {
+  transform: scale(0.9);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5019607843);
+}
+
 @media screen and (max-width: 850px) {
   .keypad {
     width: 100%;
