@@ -1,0 +1,32 @@
+.keypad {
+    box-sizing: border-box;
+    
+    width: 50%;
+    height: 100%;
+
+    padding: 40px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 25%);
+    grid-template-rows: repeat(3, 25%);
+    grid-gap: 12.5%;
+
+    background-color: #f2f2f2;
+
+    button {
+        background-color: #fff;
+        box-shadow: 0 0 0 5px #00000080;
+        font-size: 1.1em;
+    }
+    
+    button:hover {
+        transform: scale(1.1);
+        box-shadow: none;
+    }
+
+    button:active {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 10px #00000080;
+    }
+}
